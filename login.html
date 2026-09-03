@@ -4,8 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RESERVAS</title>
+
+    <style>.conteiner{
+        background-color:#ffffff;
+        padding: 20px;
+        max-width: 400px;
+        border-radius: 8px;
+        border: 1px solid #cccccc
+    }
+        
+        input{width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+
+
+        }
+        button{
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+
+        }
+        
+
+    </style>
+
 </head>
-<body>
-    <h1>HOTEL</h1>
+<body style="text-align: center; background-color: blueviolet;" >
+    <div>
+        <h1>HotelSystem</h1>
+        <h2>Acesso do Cliente</h2>
+        <div class="conteiner">
+        <form action="autenticar.php" method="POST">
+            <div>
+                <label for="usuario">Usuário ou E-mail</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Digite seu e-mail" required>
+                <br><br>
+            </div>
+            <div>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                <br><br>
+            </div>
+            <button type="submit" class="btn-login">Cadastrar</button><br>
+            <a href="cadastro_cliente.html">sem cadastro</a>
+        </form>
+    </div>
+    </div>
 </body>
 </html>
