@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESERVAGAS.COM</title>
+    
+</head>
+<body>
+    <div>
+    <h1>RESERVAGAS.COM</h1>
+    <h2>Cadastro de Hoteis</h2>
+    <div>
+        <form action="salvar_hotel.php" method="POST">
+            <div>
+                <label for="hotel">Nome do Hotel</label>
+                <input type="text" id="hotel" name="hotel" placeholder="Nome do Hotel" required>
+            <br><br>
+            </div>
+            <div>
+                <label for="cidade">Nome da Cidade</label>
+                <input type="text" name="cidade" id="cidade" placeholder="Nome da Cidade" required>
+            </div>
+            <br><br>
+            <div>
+                <label for="estrelas">Estrelas</label>
+                <input type="number" id="number" name="number" placeholder="Numero de Estrelas" required>
+            </div>
+            <br><br>
+            <button type="submit" class="btn-login">Cadastrar</button>
+        </form>
+    </div>
+    </div>
+    
+</body>
+</html>
