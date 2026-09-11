@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RESERVAGAS.COM</title>
+
+     <link rel="stylesheet" href="css/estilo.css">
+
+     <style>
+        input{
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        form{
+            text-align: center;
+        }
+        button{
+            background-color: #4caf50;
+        }
+     </style>
     
 </head>
 <body>
     <div>
-    <h1>RESERVAGAS.COM</h1>
+    <h1 style="color: #604E7A; text-align: center;">RESERVAGAS.COM</h1>
     <h2>Cadastro de Hoteis</h2>
     <div>
         <form action="salvar_hotel.php" method="POST">
             <div>
-                <label for="hotel">Nome do Hotel</label>
-                <input type="text" id="hotel" name="hotel" placeholder="Nome do Hotel" required>
+                <label for="nome">Nome do Hotel</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome do Hotel" required>
             <br><br>
             </div>
             <div>
