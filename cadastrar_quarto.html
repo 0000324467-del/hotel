@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de quartos</title>
+</head>
+<body>
+    <div>
+        <form action="salvar_quarto.php" method="POST">
+            <div>
+                <label for="id_hotel">Nome do Hotel</label>
+                <input type="number" id="id_hotel" name="id_hotel" placeholder="numero do hotel" required>
+            <br><br>
+            </div>
+            <div>
+                <label for="numero_quarto">Numero do quarto</label>
+                <input type="text" name="numero_quarto" id="numero_quarto" placeholder="numero do quarto" required>
+            </div>
+            <br><br>
+            <div>
+                <label for="tipo_quarto">Tipo de quarto</label>
+                <select name="tipo_quarto" id="tipo_quarto">
+                    <option value="solteiro">Solteiro</option>
+                    <option value="casal">Casal</option>
+                    <option value="suite luxo">Suíte Luxo</option>
+                    <option value="familia">Família</option>
+                </select>
+            </div>
+            <br><br>
+            <div>
+                <label for="preco_diaria">Valor da Diária</label>
+                <input type="number" step="0.01" id="number" name="number" min="0.0" placeholder="Valor da Diária" required>
+            </div>
+            <br><br>
+            <button type="submit" class="btn-login">Salvar Quarto</button>
+        </form>
+        <br><br>
+        <a href="logout_hotel.php">Você saiu do Cadastro de Quartos</a>
+    </div>
+</body>
+</html>
