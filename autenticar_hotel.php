@@ -12,6 +12,7 @@ if (mysqli_num_rows($resultado) > 0) {
     header("location: cadastrar_quarto.php");
     exit();
 }else {
+    echo "<a href = 'login_hotel.html'>faça login novamente</a>";
     header("location: login_hotel.html");
     exit();
 }
