@@ -21,6 +21,9 @@ while ($linha = mysqli_fetch_assoc($resultado)) {
 }
 
 echo "</table>";
+echo "<br>";
 echo "<a href = 'cadastrar_quarto.html'>Cadastre outro quarto</a>";
+echo "<br><br>";
 echo "<a href = 'login_hotel.html'>Voltar/Sair</a>";
 
+?>
