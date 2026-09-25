@@ -2,8 +2,22 @@
 
 require_once "conexao.php";
 
-$sql = "SELECT hotel_id, numero, tipo FROM quartos";
+$sql = "SELECT reservas.id, quartos.numero, quartos.tipo, quartos.preco_diaria, reservas.data_entrada, reservas.data_saida, hoteis.nome FROM reservas JOIN quartos ON reservas.quarto_id = quartos.id JOIN hoteis ON quartos.id_hotel = hoteis.id WHERE reservas.id_cliente = '$id_cliente'";
 $resultado = mysqli_query($conexao, $sql);
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Reservas</title>
+</head>
+<body>
+    
+</body>
+</html>
 
 echo "<table border='1'>";
 echo "<tr>

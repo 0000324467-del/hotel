@@ -40,22 +40,22 @@ echo "</table>";
         <form action="salvar_reservas.php" method="POST">
             <div>
                 <label for="id_cliente">Id do Cliente</label>
-                <input type="number" id="id_cliente" name="id_cliente" placeholder="Id do Cliente" required>
+                <input type="number" id="cliente_id" name="cliente_id" placeholder="Id do Cliente" required>
             <br><br>
             </div>
             <div>
-                <label for="id_quarto">Id do Hotel</label>
-                <input type="number" name="id_quarto" id="id_quarto" placeholder="Id do Hotel" required>
+                <label for="id_quarto">Id do Quarto</label>
+                <input type="number" name="quarto_id" id="quarto_id" placeholder="Id do Hotel" required>
             </div>
             <br><br>
             <div>
                 <label for="entrada">data da entrada</label>
-                <input type="date" id="entrada" name="entrada" placeholder="data da entrada" min="1" max="5" required>
+                <input type="date" id="data_entrada" name="data_entrada" placeholder="data da entrada" min="1" max="5" required>
             </div>
             <br><br>
             <div>
                 <label for="saida">data da saida</label>
-                <input type="date" id="saida" name="saida" placeholder="data da saída do hotel" required>
+                <input type="date" id="data_saida" name="data_saida" placeholder="data da saída do hotel" required>
             </div>
             <br><br>
             <button type="submit" class="btn-login">confirmar reserva</button>
