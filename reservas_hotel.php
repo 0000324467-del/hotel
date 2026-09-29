@@ -3,36 +3,33 @@
 require_once "conexao.php";
 
 $sql = "SELECT 
-reservas.id AS id_reservas,
-hoteis.id AS id_hoteis,
-hoteis.nome AS nome_hotel,
-quartos.tipo,
-quartos.preco_diaria,
-reservas.data_entrada,
-reservas.data_saida
+reservas.id, clientes.nome AS nome_cliente, 
+clientes.telefone, quartos.numero_quarto, reservas. data_entrada, reservas.data_saida 
+
 FROM reservas
 JOIN quartos ON reservas.quarto_id = quartos.id 
-JOIN hoteis ON quartos.hotel_id = hoteis.id";
+JOIN clientes ON reservas.id_cliente = clientes.id
+WHERE quartos.id_hotel = '$id_hotel";
 
 $resultado = mysqli_query ($conexao, $sql);
 
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device=width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reservas Hotel</title>
 </head>
 <body>
-    <h2>Minhas Reservas Confirmadas</h2>
+    <h2>Minhas Reservas Solicitadas</h2>
     <table>
         <tr>
             <th>cod.reserva</th>
-            <th>Quarto</th>
-            <th>tipo de quarto</th>
-            <th>diaria</th>
+            <th>Nome Cliente</th>
+            <th>telefone do Cliente</th>
+            <th>Numero do Quarto</th>
             <th>data entrada</th>
             <th>data saida</th>
         </tr>
@@ -41,9 +38,9 @@ $resultado = mysqli_query ($conexao, $sql);
                 while($linha = mysqli_fetch_assoc($resultado)){
                     echo "<tr>
                         <td>".$linha['id_reservas']." </tr>
-                        <td>".$linha['nome_hotel']. " </tr>
-                        <td>".$linha['tipo']." </tr>
-                        <td>".$linha['preco_diaria']." </tr>
+                        <td>".$linha['nome']. " </tr>
+                        <td>".$linha['telefone']." </tr>
+                        <td>".$linha['numero']." </tr>
                         <td>".$linha['data_entrada']." </tr>
                         <td>".$linha['data_saida']." </tr>
                 </tr>";
@@ -51,6 +48,7 @@ $resultado = mysqli_query ($conexao, $sql);
             ?>
         
     </table>
-    <a href="listar_hoteis.php">cliqui aqui para novas reservas</a>
+    <a href="cadastrar_quartos.php">cliqui aqui cadastrar outro quarto</a>
+    <a href="logout_hotel.php">sair</a>
 </body>
 </html>
