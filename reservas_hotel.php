@@ -44,7 +44,7 @@ $resultado = mysqli_query ($conexao, $sql);
                             <td>".$linha['data_entrada']." </td>
                             <td>".$linha['data_saida']." </td>
                         </tr>";
-            }
+                    }
             ?>
         
     </table>
