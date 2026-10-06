@@ -1,5 +1,10 @@
 body{
     background-color: blueviolet;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding: 20px;
+}
+
+.teste{
+    background-color: red;
 }
