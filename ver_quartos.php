@@ -34,7 +34,7 @@ echo "
 echo "</table>"; 
 ?>
 
-<body>
+<body> 
     <h2>Quartos Disponíveis no Hotel selecionado</h2>
     <div>
         <form action="salvar_reservas.php" method="POST">
